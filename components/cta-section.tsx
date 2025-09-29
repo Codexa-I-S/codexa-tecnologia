@@ -20,15 +20,15 @@ export function CTASection() {
           className="flex flex-col items-center justify-center space-y-6 text-center"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Ready to Transform Your Workflow?
+            Pronto para Transformar sua Ideia em Realidade?
           </h2>
           <p className="mx-auto max-w-[700px] text-primary-foreground/80 md:text-xl">
-            Join thousands of satisfied customers who have streamlined their processes and boosted productivity with our
-            platform.
+            Desenvolvemos soluções sob medida que impulsionam o crescimento do seu negócio. Da concepção ao lançamento,
+            nossa equipe especializada está pronta para criar o software perfeito para você.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <Button size="lg" variant="secondary" className="rounded-full h-12 px-8 text-base">
-              Start Free Trial
+              Iniciar Projeto
               <ArrowRight className="ml-2 size-4" />
             </Button>
             <Button
@@ -36,11 +36,11 @@ export function CTASection() {
               variant="outline"
               className="rounded-full h-12 px-8 text-base bg-transparent border-white text-white hover:bg-white/10"
             >
-              Schedule a Demo
+              Falar com Especialista
             </Button>
           </div>
           <p className="text-sm text-primary-foreground/80 mt-4">
-            No credit card required. 14-day free trial. Cancel anytime.
+            Consultoria gratuita. Orçamento sem compromisso. Suporte completo.
           </p>
         </motion.div>
       </div>

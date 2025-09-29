@@ -21,7 +21,7 @@ export function HeroSection() {
           <Badge className="mb-4 rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
             Software House
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-6 bg-clip-text leading-none text-transparent bg-gradient-to-r from-foreground to-foreground/80">
             Transformamos Ideias em Soluções Digitais
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">

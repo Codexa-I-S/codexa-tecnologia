@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Codexa Technology",
-  description: "Boost productivity, reduce costs, and scale your business with our all-in-one SaaS platform."
+  description: "Boost productivity, reduce costs, and scale your business with our all-in-one SaaS platform.",
+  icons: "/favicon-codexa.png"
 }
 
 export default function RootLayout({

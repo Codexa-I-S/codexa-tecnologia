@@ -1,17 +1,33 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
+import { useTheme } from "next-themes"
 
 export function Footer() {
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   return (
     <footer className="w-full border-t bg-background/95 backdrop-blur-sm">
-      <div className="container flex flex-col gap-8 px-4 py-10 md:px-6 lg:py-16">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+      <div className="container flex flex-col gap-8 px-4 py-6 md:px-6 lg:py-8">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 items-center">
           <div className="space-y-4">
-            <div className="flex items-center gap-2 font-bold">
-              <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
-                S
-              </div>
-              <span>SaaSify</span>
-            </div>
+          <div className="flex items-center">
+            <Link href="/">
+              <Image
+                src={mounted && theme === "dark" ? "/codexa-horizontal.png" : "/codexa-lightMode.png"}
+                alt="Codexa Technology"
+                width={170}
+                height={40}
+              />
+            
+            </Link>
+          </div>
             <p className="text-sm text-muted-foreground">
               Streamline your workflow with our all-in-one SaaS platform. Boost productivity and scale your business.
             </p>
