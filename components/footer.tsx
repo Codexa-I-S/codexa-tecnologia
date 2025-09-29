@@ -29,7 +29,7 @@ export function Footer() {
             </Link>
           </div>
             <p className="text-sm text-muted-foreground">
-              Streamline your workflow with our all-in-one SaaS platform. Boost productivity and scale your business.
+              Desenvolvemos soluções sob medida que transformam ideias em realidade digital. Impulsione seu negócio com nossa expertise.
             </p>
             <div className="flex gap-4">
               <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -88,41 +88,41 @@ export function Footer() {
             </div>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-bold">Product</h4>
+            <h4 className="text-sm font-bold">Serviços</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Features
+                  Desenvolvimento Web
                 </Link>
               </li>
               <li>
                 <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Pricing
+                  Aplicativos Mobile
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Integrations
+                  Sistemas Personalizados
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  API
+                  Consultoria Tech
                 </Link>
               </li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-bold">Resources</h4>
+            <h4 className="text-sm font-bold">Recursos</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Documentation
+                  Portfólio
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Guides
+                  Cases de Sucesso
                 </Link>
               </li>
               <li>
@@ -132,32 +132,32 @@ export function Footer() {
               </li>
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Support
+                  Suporte
                 </Link>
               </li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-bold">Company</h4>
+            <h4 className="text-sm font-bold">Empresa</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  About
+                  Sobre Nós
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Careers
+                  Carreiras
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Privacy Policy
+                  Política de Privacidade
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Terms of Service
+                  Termos de Serviço
                 </Link>
               </li>
             </ul>
@@ -165,17 +165,17 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-8">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} SaaSify. All rights reserved.
+            &copy; {new Date().getFullYear()} Codexa Technology. Todos os direitos reservados.
           </p>
           <div className="flex gap-4">
             <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Privacy Policy
+              Política de Privacidade
             </Link>
             <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Terms of Service
+              Termos de Serviço
             </Link>
             <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Cookie Policy
+              Política de Cookies
             </Link>
           </div>
         </div>

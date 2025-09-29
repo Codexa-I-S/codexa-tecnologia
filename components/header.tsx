@@ -53,19 +53,19 @@ export function Header() {
             href="#features"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Features
+            Serviços
           </Link>
           <Link
             href="#testimonials"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Testimonials
+            Depoimentos
           </Link>
           <Link
             href="#pricing"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Pricing
+            Preços
           </Link>
           <Link
             href="#faq"
@@ -77,10 +77,10 @@ export function Header() {
         <div className="hidden md:flex gap-4 items-center">
           <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
             {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
-            <span className="sr-only">Toggle theme</span>
+            <span className="sr-only">Alternar tema</span>
           </Button>
           <Button className="rounded-full">
-            Get Started
+            Entrar em Contato
             <ChevronRight className="ml-1 size-4" />
           </Button>
         </div>
@@ -90,7 +90,7 @@ export function Header() {
           </Button>
           <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-            <span className="sr-only">Toggle menu</span>
+            <span className="sr-only">Alternar menu</span>
           </Button>
         </div>
       </div>
@@ -104,23 +104,23 @@ export function Header() {
         >
           <div className="container py-4 flex flex-col gap-4">
             <Link href="#features" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
-              Features
+              Serviços
             </Link>
             <Link href="#testimonials" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
-              Testimonials
+              Depoimentos
             </Link>
             <Link href="#pricing" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
-              Pricing
+              Preços
             </Link>
             <Link href="#faq" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
               FAQ
             </Link>
             <div className="flex flex-col gap-2 pt-2 border-t">
               <Link href="#" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
-                Log in
+                Entrar
               </Link>
               <Button className="rounded-full">
-                Get Started
+                Começar
                 <ChevronRight className="ml-1 size-4" />
               </Button>
             </div>
