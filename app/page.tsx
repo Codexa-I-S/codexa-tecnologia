@@ -8,6 +8,9 @@ import { PricingSection } from "@/components/pricing-section"
 import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
+import { AlternatingSections } from "@/components/AlternatingSections"
+import { ContactFormSection } from "@/components/ContactFormSection"
+
 
 export default function LandingPage() {
   return (
@@ -16,12 +19,14 @@ export default function LandingPage() {
       <main className="flex-1">
         <HeroSection />
         <LogosSection />
+        <AlternatingSections/>
         <FeaturesSection />
         <HowItWorksSection />
         <TestimonialsSection />
         <PricingSection />
         <FAQSection />
-        <CTASection />
+        {/* <CTASection /> */}
+        <ContactFormSection/>
       </main>
       <Footer />
     </div>
