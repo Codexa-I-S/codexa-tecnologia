@@ -2,95 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* CODEXA Dark Tech Design System - Argus VPN Inspired */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Dark Background */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Cards with Glassmorphism */
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover */
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Neon Blue */
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Electric Purple */
+    --secondary: 262 84% 51%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Dark Gray */
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 63%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Purple Glow */
+    --accent: 262 84% 51%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders & Inputs */
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 211 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom Neon Colors */
+    --neon-blue: 211 100% 50%;
+    --neon-purple: 262 84% 51%;
+    --neon-cyan: 180 100% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Glassmorphism */
+    --glass-bg: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Text Colors */
+    --text-primary: 0 0% 100%;
+    --text-secondary: 0 0% 63%;
+    --text-muted: 0 0% 45%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 211 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 211 100% 50%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Same as root - dark is default */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
   }
 }
 
@@ -99,7 +82,211 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom Selection */
+  ::selection {
+    @apply bg-primary/30 text-white;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl;
+    box-shadow: 
+      0 0 20px hsl(var(--neon-blue) / 0.1),
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.05);
+  }
+
+  .glass-card:hover {
+    @apply border-white/20;
+    box-shadow: 
+      0 0 40px hsl(var(--neon-blue) / 0.2),
+      0 0 80px hsl(var(--neon-purple) / 0.1),
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.1);
+  }
+
+  /* Neon Glow Button */
+  .btn-neon {
+    @apply relative overflow-hidden rounded-xl px-8 py-4 font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)));
+    box-shadow: 
+      0 0 20px hsl(var(--neon-blue) / 0.4),
+      0 0 40px hsl(var(--neon-purple) / 0.2);
+  }
+
+  .btn-neon:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 0 30px hsl(var(--neon-blue) / 0.6),
+      0 0 60px hsl(var(--neon-purple) / 0.4),
+      0 10px 40px hsl(0 0% 0% / 0.4);
+  }
+
+  .btn-neon::before {
+    @apply absolute inset-0;
+    content: '';
+    background: linear-gradient(135deg, transparent, hsl(0 0% 100% / 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .btn-neon:hover::before {
+    transform: translateX(100%);
+  }
+
+  /* Outline Neon Button */
+  .btn-outline-neon {
+    @apply relative rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-white transition-all duration-300;
+    background: transparent;
+  }
+
+  .btn-outline-neon:hover {
+    @apply border-primary bg-primary/10;
+    box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.3);
+  }
+
+  /* Neon Text Gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)), hsl(var(--neon-cyan)));
+  }
+
+  /* Glowing Input */
+  .input-glow {
+    @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-white/40 outline-none transition-all duration-300;
+  }
+
+  .input-glow:focus {
+    @apply border-primary/50 bg-white/10;
+    box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.2);
+  }
+
+  /* Section Title */
+  .section-title {
+    @apply text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-white/60 md:text-xl;
+  }
+
+  /* Animated Background Orb */
+  .orb {
+    @apply absolute rounded-full blur-3xl;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .orb-blue {
+    background: radial-gradient(circle, hsl(var(--neon-blue) / 0.6), transparent 70%);
+  }
+
+  .orb-purple {
+    background: radial-gradient(circle, hsl(var(--neon-purple) / 0.6), transparent 70%);
+  }
+
+  /* Grid Background */
+  .grid-bg {
+    background-image: 
+      linear-gradient(hsl(0 0% 100% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
+
+@layer utilities {
+  /* Glow Effects */
+  .glow-sm {
+    box-shadow: 0 0 10px hsl(var(--neon-blue) / 0.3);
+  }
+
+  .glow-md {
+    box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.4);
+  }
+
+  .glow-lg {
+    box-shadow: 
+      0 0 30px hsl(var(--neon-blue) / 0.5),
+      0 0 60px hsl(var(--neon-purple) / 0.3);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--neon-blue) / 0.5);
+  }
+
+  /* Animation Delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-700 { animation-delay: 700ms; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0 0% 5%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--neon-blue) / 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--neon-blue) / 0.7);
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 
+      0 0 20px hsl(var(--neon-blue) / 0.4),
+      0 0 40px hsl(var(--neon-purple) / 0.2);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 
+      0 0 40px hsl(var(--neon-blue) / 0.6),
+      0 0 80px hsl(var(--neon-purple) / 0.4);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
