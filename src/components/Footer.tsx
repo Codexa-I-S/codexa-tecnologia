@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/src/assets/codexa-logo.png" 
+                src="/codexa-logo.png" 
                 alt="CODEXA Tecnologia e Inovação" 
                 className="h-20 w-auto"
               />
