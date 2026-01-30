@@ -178,13 +178,13 @@ const ContactSection = () => {
                 </div>
               </a>
 
-              <a href="tel:+5511999999999" className="glass-card p-6 flex items-start gap-4 group hover:scale-[1.02] transition-transform duration-300">
+              <a href="tel:+5588988918671" className="glass-card p-6 flex items-start gap-4 group hover:scale-[1.02] transition-transform duration-300">
                 <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center shrink-0 group-hover:bg-secondary/30 transition-colors">
                   <Phone className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-white mb-1">Telefone</h4>
-                  <p className="text-white/60">+55 (11) 99999-9999</p>
+                  <p className="text-white/60">+55 (88) 98891-8671</p>
                 </div>
               </a>
 
