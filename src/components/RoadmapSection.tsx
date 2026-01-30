@@ -35,14 +35,10 @@ const RoadmapSection = () => {
     offset: ['start end', 'end start'],
   });
 
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const lineProgress = useTransform(scrollYProgress, [0.1, 0.9], ['0%', '100%']);
 
   return (
-    <section
-      ref={containerRef}
-      id="roadmap"
-      className="relative py-32 overflow-hidden"
-    >
+    <section ref={containerRef} id="roadmap" className="relative py-32 overflow-hidden">
       {/* Starfield background effect */}
       <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
@@ -71,13 +67,11 @@ const RoadmapSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
 
       <div className="container mx-auto px-6 relative z-20">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">
             Nossa <span className="text-gradient">Trajetória</span>
@@ -88,33 +82,53 @@ const RoadmapSection = () => {
         </motion.div>
 
         {/* Timeline */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Central Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2">
+        <div className="relative max-w-3xl mx-auto">
+          {/* Timeline line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-white/10 md:-translate-x-1/2">
             <motion.div
               className="w-full bg-gradient-to-b from-primary via-secondary to-neon-cyan"
-              style={{ height: lineHeight }}
+              style={{ height: lineProgress }}
             />
           </div>
 
-          {/* Milestones */}
-          <div className="space-y-24 md:space-y-32">
+          <div className="space-y-12">
             {milestones.map((milestone, index) => (
               <motion.div
                 key={milestone.date}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className={`relative flex items-center gap-8 md:gap-16 ${
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className={`relative flex items-start gap-6 md:gap-12 ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
               >
-                {/* Content Card */}
-                <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                {/* Node */}
+                <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2">
+                  <motion.div
+                    animate={{
+                      boxShadow: [
+                        `0 0 15px hsl(var(--${milestone.color}) / 0.4)`,
+                        `0 0 30px hsl(var(--${milestone.color}) / 0.6)`,
+                        `0 0 15px hsl(var(--${milestone.color}) / 0.4)`,
+                      ],
+                    }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className={`w-4 h-4 rounded-full border-2 ${
+                      milestone.color === 'neon-blue'
+                        ? 'bg-primary border-primary'
+                        : milestone.color === 'neon-purple'
+                        ? 'bg-secondary border-secondary'
+                        : 'bg-neon-cyan border-neon-cyan'
+                    }`}
+                  />
+                </div>
+
+                {/* Content */}
+                <div className={`flex-1 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className="glass-card p-6 md:p-8 relative group"
+                    className="glass-card p-6 group relative"
                   >
                     {/* Glow effect */}
                     <div
@@ -128,7 +142,7 @@ const RoadmapSection = () => {
                     />
                     <div className="relative z-10">
                       <span
-                        className={`inline-block text-sm font-bold mb-3 ${
+                        className={`text-2xl md:text-3xl font-bold ${
                           milestone.color === 'neon-blue'
                             ? 'text-primary'
                             : milestone.color === 'neon-purple'
@@ -138,39 +152,18 @@ const RoadmapSection = () => {
                       >
                         {milestone.date}
                       </span>
-                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                      <h3 className="text-base md:text-lg font-bold text-foreground mt-2 mb-2">
                         {milestone.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         {milestone.description}
                       </p>
                     </div>
                   </motion.div>
                 </div>
 
-                {/* Center Node */}
-                <div className="absolute left-1/2 -translate-x-1/2 z-20">
-                  <motion.div
-                    animate={{
-                      boxShadow: [
-                        `0 0 20px hsl(var(--${milestone.color}) / 0.4)`,
-                        `0 0 40px hsl(var(--${milestone.color}) / 0.6)`,
-                        `0 0 20px hsl(var(--${milestone.color}) / 0.4)`,
-                      ],
-                    }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className={`w-5 h-5 rounded-full border-2 ${
-                      milestone.color === 'neon-blue'
-                        ? 'bg-primary border-primary'
-                        : milestone.color === 'neon-purple'
-                        ? 'bg-secondary border-secondary'
-                        : 'bg-neon-cyan border-neon-cyan'
-                    }`}
-                  />
-                </div>
-
-                {/* Spacer for alternating layout */}
-                <div className="flex-1 hidden md:block" />
+                {/* Spacer */}
+                <div className="hidden md:block flex-1" />
               </motion.div>
             ))}
           </div>
@@ -180,7 +173,7 @@ const RoadmapSection = () => {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="absolute left-1/2 -translate-x-1/2 -bottom-8"
+            className="absolute left-8 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2 -bottom-8"
           >
             <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-secondary animate-pulse-glow" />
           </motion.div>

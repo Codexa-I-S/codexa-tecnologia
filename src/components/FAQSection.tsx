@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: 'Quais tecnologias vocês utilizam?',
-    answer: 'Utilizamos as tecnologias mais modernas do mercado: React, Next.js, Node.js, Python, TypeScript, Go para desenvolvimento; AWS, Azure e GCP para cloud; TensorFlow e PyTorch para IA; PostgreSQL, MongoDB e Redis para bancos de dados; Docker e Kubernetes para containerização.',
+    answer: 'Utilizamos as tecnologias mais modernas do mercado: React, Next.js, Node.js, Python, TypeScript; TensorFlow e PyTorch para IA; PostgreSQL, MongoDB para bancos de dados; Docker para containerização.',
   },
   {
     question: 'Como funciona o processo de consultoria em TI?',

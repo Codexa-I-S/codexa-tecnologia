@@ -29,7 +29,7 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed left-0 right-0 top-0 z-[9999] transition-all duration-300 ${
         isScrolled ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' : 'bg-transparent'
       }`}
     >
@@ -101,7 +101,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10"
+            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10 relative z-[9999]"
           >
             <nav className="container mx-auto px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link, index) => 
@@ -130,9 +130,12 @@ const Header = () => {
                     transition={{ delay: index * 0.1 }}
                   >
                     <button
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault();
                         setIsMobileMenuOpen(false);
-                        window.location.href = link.href;
+                        setTimeout(() => {
+                          window.location.href = link.href;
+                        }, 100);
                       }}
                       className="block text-lg font-medium text-white/70 hover:text-white transition-colors py-2 bg-transparent border-none cursor-pointer w-full text-left"
                     >
@@ -142,9 +145,12 @@ const Header = () => {
                 )
               )}
               <button
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   setIsMobileMenuOpen(false);
-                  window.location.href = '/#contact';
+                  setTimeout(() => {
+                    window.location.href = '/#contact';
+                  }, 100);
                 }}
                 className="btn-neon text-center mt-4 bg-transparent border-none cursor-pointer w-full"
               >
