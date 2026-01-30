@@ -124,24 +124,12 @@
   }
 
   .btn-neon:hover {
-    transform: translateY(-2px);
     box-shadow: 
       0 0 30px hsl(var(--neon-blue) / 0.6),
       0 0 60px hsl(var(--neon-purple) / 0.4),
       0 10px 40px hsl(0 0% 0% / 0.4);
   }
 
-  .btn-neon::before {
-    @apply absolute inset-0;
-    content: '';
-    background: linear-gradient(135deg, transparent, hsl(0 0% 100% / 0.2), transparent);
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
-  }
-
-  .btn-neon:hover::before {
-    transform: translateX(100%);
-  }
 
   /* Outline Neon Button */
   .btn-outline-neon {

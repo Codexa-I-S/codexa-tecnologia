@@ -1,43 +1,42 @@
 import { motion } from 'framer-motion';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Github } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Carlos Silva',
-    role: 'CEO & Co-Founder',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
-    linkedin: '#',
+    name: 'Daniel Verissimo',
+    role: 'Desenvolvedor Front-End & Co-Foundador',
+    image: '/profile/Imagem-daniel03.JPG',
+    linkedin: 'https://www.linkedin.com/in/daniel-verissimo/',
+    github: 'https://github.com/DanielVerissimo1',
   },
   {
-    name: 'Ana Rodrigues',
-    role: 'CTO & Co-Founder',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face',
-    linkedin: '#',
+    name: 'Davi de Castro',
+    role: 'Desenvolvedor Front-End & Co-Foundador',
+    image: '/profile/163475173.jpg',
+    linkedin: 'https://www.linkedin.com/in/davicastro213/',
+    github: 'https://github.com/Davi-santos16',
+  },  
+  {
+    name: 'Maira Castro',
+    role: 'Desenvolvedora Back-End & Co-Foundador',
+    image: '/profile/Hire-Maira-n-2vGeER.webp',
+    linkedin: 'https://www.linkedin.com/in/maira-stefane-b86492208/',
+    github: 'https://github.com/Maira-castro',
   },
   {
-    name: 'Pedro Santos',
-    role: 'Head of Engineering',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-    linkedin: '#',
+    name: 'Valdiano Rocha',
+    role: 'Desenvolvedor Back-End & Co-Foundador',
+    image: '/profile/Hire-Valdiano-TEyn30O0.webp',
+    linkedin: 'https://www.linkedin.com/in/valdiano-rocha-4b82bb143/',
+    github: 'https://github.com/ValdianoRocha',
   },
   {
-    name: 'Mariana Costa',
-    role: 'Head of Design',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
-    linkedin: '#',
-  },
-  {
-    name: 'Lucas Oliveira',
-    role: 'Lead AI Engineer',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
-    linkedin: '#',
-  },
-  {
-    name: 'Julia Ferreira',
-    role: 'Head of Product',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face',
-    linkedin: '#',
-  },
+    name: 'José Lianderson',
+    role: 'Desenvolvedor Back-End & Co-Foundador',
+    image: '/profile/Hire-Lianderson-JBrc6XlD.webp',
+    linkedin: 'https://www.linkedin.com/in/jose-lianderson-ribeiro/',
+    github: 'https://github.com/liandersonDesen',
+  }
 ];
 
 const TeamSection = () => {
@@ -86,22 +85,11 @@ const TeamSection = () => {
                 <div className="relative z-10">
                   {/* Image with duotone effect */}
                   <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 mix-blend-overlay z-10" />
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover transition-all duration-500"
                     />
-                    {/* Scanline effect */}
-                    <div className="absolute inset-0 pointer-events-none opacity-20">
-                      {[...Array(20)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="h-px bg-white/30"
-                          style={{ marginTop: `${i * 8}px` }}
-                        />
-                      ))}
-                    </div>
                   </div>
 
                   <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-gradient transition-all duration-300">
@@ -109,14 +97,24 @@ const TeamSection = () => {
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">{member.role}</p>
 
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
-                  >
-                    <Linkedin size={18} />
-                  </a>
+                  <div className="flex gap-2 justify-center">
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+                    >
+                      <Linkedin size={18} />
+                    </a>
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+                    >
+                      <Github size={18} />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>

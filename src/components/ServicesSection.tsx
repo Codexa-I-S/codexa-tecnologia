@@ -81,7 +81,7 @@ const ServicesSection = () => {
           <span className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6">
             Nossos Serviços
           </span>
-          <h2 className="section-title mb-6">
+          <h2 className="text-5xl font-bold mb-6">
             Soluções que <span className="text-gradient">Impulsionam</span> seu Negócio
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">
@@ -102,13 +102,13 @@ const ServicesSection = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="glass-card p-8 group cursor-pointer transition-all duration-500 hover:scale-[1.02]"
+              className="glass-card p-8 group cursor-pointer transition-all duration-500 hover:scale-[1.02] overflow-hidden"
             >
               {/* Icon */}
               <div className="relative w-16 h-16 mb-6">
                 <div className="absolute inset-0 rounded-2xl bg-neon-gradient opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
                 <div className="absolute inset-[1px] rounded-[15px] bg-black/80 flex items-center justify-center">
-                  <service.icon className="w-7 h-7 text-primary group-hover:text-gradient transition-colors duration-300" />
+                  <service.icon className="w-7 h-7 text-primary transition-colors duration-300" />
                 </div>
               </div>
 
@@ -133,7 +133,7 @@ const ServicesSection = () => {
               </div>
 
               {/* Hover Glow Line */}
-              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-neon-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl" />
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-neon-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
         </motion.div>

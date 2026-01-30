@@ -52,7 +52,7 @@ const FAQSection = () => {
           <span className="inline-block px-4 py-2 rounded-full border border-secondary/30 bg-secondary/10 text-secondary text-sm font-medium mb-6">
             FAQ
           </span>
-          <h2 className="section-title mb-6">
+          <h2 className="text-5xl font-bold mb-6">
             Dúvidas <span className="text-gradient">Frequentes</span>
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">

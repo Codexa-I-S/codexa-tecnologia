@@ -34,14 +34,14 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-25  items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center group relative">
             <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-primary/30" />
             <img 
               src="/src/assets/codexa-logo.png" 
               alt="CODEXA Tecnologia e Inovação" 
-              className="h-10 w-auto relative z-10 transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_15px_hsl(211,100%,50%,0.6)]"
+              className="h-20 w-130 relative z-10 transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_15px_hsl(211,100%,50%,0.6)]"
             />
           </Link>
 
@@ -77,6 +77,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a href="#contact" className="btn-neon text-sm">
+          
               Fale Conosco
             </a>
           </div>

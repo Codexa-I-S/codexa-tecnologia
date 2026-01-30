@@ -82,7 +82,7 @@ const RoadmapSection = () => {
           <span className="text-sm font-medium text-primary uppercase tracking-widest mb-4 block">
             Visão de Futuro
           </span>
-          <h2 className="section-title mb-6">
+          <h2 className="text-5xl font-bold mb-6">
             O Caminho da{' '}
             <span className="text-gradient">Inovação</span>
           </h2>

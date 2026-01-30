@@ -564,7 +564,7 @@ const ProcessSection = () => {
           <span className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6">
             Nosso Processo
           </span>
-          <h2 className="section-title mb-6">
+          <h2 className="text-5xl font-bold mb-6">
             Como <span className="text-gradient">Transformamos</span> Ideias em Realidade
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">

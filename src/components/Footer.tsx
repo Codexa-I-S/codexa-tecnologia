@@ -13,10 +13,10 @@ const Footer = () => {
               <img 
                 src="/src/assets/codexa-logo.png" 
                 alt="CODEXA Tecnologia e Inovação" 
-                className="h-10 w-auto"
+                className="h-20 w-auto"
               />
             </div>
-            <p className="text-white/50 max-w-sm leading-relaxed">
+            <p className="text-white/50 max-w-sm leading-relaxed ">
               Transformando o futuro através da tecnologia. Soluções inovadoras para empresas que buscam excelência digital.
             </p>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-sm">
-            © {currentYear} CODEXA Tecnologia e Inovação. Todos os direitos reservados.
+            © {currentYear} Codexa Tecnologia e Inovação. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-white/40 text-sm hover:text-white/70 transition-colors">
