@@ -9,14 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="relative h-10 w-10">
-                <div className="absolute inset-0 rounded-xl bg-neon-gradient" />
-                <div className="absolute inset-[2px] rounded-[10px] bg-black flex items-center justify-center">
-                  <span className="text-lg font-bold text-gradient">C</span>
-                </div>
-              </div>
-              <span className="text-xl font-bold text-white">CODEXA</span>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/src/assets/codexa-logo.png" 
+                alt="CODEXA Tecnologia e Inovação" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-white/50 max-w-sm leading-relaxed">
               Transformando o futuro através da tecnologia. Soluções inovadoras para empresas que buscam excelência digital.
