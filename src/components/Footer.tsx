@@ -42,7 +42,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Serviços</h4>
             <ul className="space-y-3">
-              {['Desenvolvimento', 'Consultoria', 'Cloud', 'IA & ML'].map((service) => (
+              {['Desenvolvimento Web', 'Apps Mobile', 'Sistemas Customizados', 'Suporte Dedicado'].map((service) => (
                 <li key={service}>
                   <a
                     href="#services"

@@ -5,10 +5,10 @@ import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Início', href: '/', isRoute: true },
-  { name: 'Sobre', href: '/sobre', isRoute: true },
-  { name: 'Serviços', href: '#services', isRoute: false },
-  { name: 'FAQ', href: '#faq', isRoute: false },
-  { name: 'Contato', href: '#contact', isRoute: false },
+  { name: 'Sobre', href: '/sobre#about', isRoute: true },
+  { name: 'Serviços', href: '/#services', isRoute: false },
+  { name: 'FAQ', href: '/#faq', isRoute: false },
+  { name: 'Contato', href: '/#contact', isRoute: false },
 ];
 
 const Header = () => {
@@ -62,24 +62,26 @@ const Header = () => {
                   }`} />
                 </Link>
               ) : (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  className="relative text-sm font-medium text-white/70 hover:text-white transition-colors duration-300 group"
+                  onClick={() => window.location.href = link.href}
+                  className="relative text-sm font-medium text-white/70 hover:text-white transition-colors duration-300 group bg-transparent border-none cursor-pointer"
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-neon-gradient group-hover:w-full transition-all duration-300" />
-                </a>
+                </button>
               )
             )}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="#contact" className="btn-neon text-sm">
-          
+            <button 
+              onClick={() => window.location.href = '/#contact'}
+              className="btn-neon text-sm bg-transparent border-none cursor-pointer"
+            >
               Fale Conosco
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -121,26 +123,33 @@ const Header = () => {
                     </Link>
                   </motion.div>
                 ) : (
-                  <motion.a
+                  <motion.div
                     key={link.name}
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-lg font-medium text-white/70 hover:text-white transition-colors py-2"
                   >
-                    {link.name}
-                  </motion.a>
+                    <button
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        window.location.href = link.href;
+                      }}
+                      className="block text-lg font-medium text-white/70 hover:text-white transition-colors py-2 bg-transparent border-none cursor-pointer w-full text-left"
+                    >
+                      {link.name}
+                    </button>
+                  </motion.div>
                 )
               )}
-              <a
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="btn-neon text-center mt-4"
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  window.location.href = '/#contact';
+                }}
+                className="btn-neon text-center mt-4 bg-transparent border-none cursor-pointer w-full"
               >
                 Fale Conosco
-              </a>
+              </button>
             </nav>
           </motion.div>
         )}

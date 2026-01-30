@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const AboutHero = () => {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-24">
+    <section id="about" className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-24">
       {/* Background gradient nebula effect */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[150px] animate-pulse-glow" />

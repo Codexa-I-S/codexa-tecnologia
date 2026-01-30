@@ -1,42 +1,42 @@
 import { motion } from 'framer-motion';
-import { Code, Cloud, Brain, Shield, Cpu, Database } from 'lucide-react';
+import { Code, Smartphone, Settings, Users, Headphones, Zap } from 'lucide-react';
 
 const services = [
   {
     icon: Code,
-    title: 'Desenvolvimento de Software',
-    description: 'Soluções personalizadas e escaláveis para transformar sua visão em realidade digital.',
-    features: ['Aplicações Web', 'Apps Mobile', 'APIs RESTful'],
+    title: 'Desenvolvimento Web',
+    description: 'Aplicações web modernas e responsivas usando as tecnologias mais atuais do mercado.',
+    features: ['React/Next.js', 'Node.js', 'TypeScript'],
   },
   {
-    icon: Brain,
-    title: 'Inteligência Artificial',
-    description: 'Machine Learning e automação inteligente para otimizar processos e decisões.',
-    features: ['Machine Learning', 'Chatbots', 'Análise Preditiva'],
+    icon: Smartphone,
+    title: 'Apps Mobile',
+    description: 'Aplicativos nativos e híbridos para iOS e Android com performance excepcional.',
+    features: ['React Native', 'Flutter', 'iOS/Android'],
   },
   {
-    icon: Cloud,
-    title: 'Infraestrutura Cloud',
-    description: 'Arquitetura em nuvem segura, resiliente e preparada para escalar.',
-    features: ['AWS / Azure / GCP', 'DevOps', 'Microsserviços'],
+    icon: Settings,
+    title: 'Sistemas Customizados',
+    description: 'Soluções sob medida para automatizar processos e otimizar operações do seu negócio.',
+    features: ['Automação', 'Integração', 'APIs'],
   },
   {
-    icon: Shield,
-    title: 'Consultoria em TI',
-    description: 'Estratégias tecnológicas alinhadas aos objetivos do seu negócio.',
-    features: ['Auditoria', 'Planejamento', 'Transformação Digital'],
+    icon: Zap,
+    title: 'Metodologia Ágil',
+    description: 'Desenvolvimento iterativo com entregas frequentes e feedback contínuo.',
+    features: ['Scrum', 'Kanban', 'DevOps'],
   },
   {
-    icon: Database,
-    title: 'Big Data & Analytics',
-    description: 'Transforme dados em insights acionáveis e vantagem competitiva.',
-    features: ['Data Lakes', 'BI Dashboards', 'ETL Pipelines'],
+    icon: Users,
+    title: 'Equipe Especializada',
+    description: 'Desenvolvedores sênior com expertise em tecnologias modernas e melhores práticas.',
+    features: ['Sênior', 'Full-Stack', 'Especialistas'],
   },
   {
-    icon: Cpu,
-    title: 'Automação de Processos',
-    description: 'RPA e workflows automatizados para eficiência operacional.',
-    features: ['RPA', 'Integração de Sistemas', 'Workflows'],
+    icon: Headphones,
+    title: 'Suporte Dedicado',
+    description: 'Acompanhamento completo desde o desenvolvimento até a manutenção contínua.',
+    features: ['24/7', 'Manutenção', 'Consultoria'],
   },
 ];
 
@@ -78,9 +78,6 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6">
-            Nossos Serviços
-          </span>
           <h2 className="text-5xl font-bold mb-6">
             Soluções que <span className="text-gradient">Impulsionam</span> seu Negócio
           </h2>

@@ -79,12 +79,8 @@ const RoadmapSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-sm font-medium text-primary uppercase tracking-widest mb-4 block">
-            Visão de Futuro
-          </span>
           <h2 className="text-5xl font-bold mb-6">
-            O Caminho da{' '}
-            <span className="text-gradient">Inovação</span>
+            Nossa <span className="text-gradient">Trajetória</span>
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">
             Nossa jornada estratégica rumo à transformação digital do mercado
