@@ -73,7 +73,7 @@ const ContactSection = () => {
             transition={{ duration: 0.8 }}
             className="glass-card p-8"
           >
-            <form action="mailto:codexa.technologgy@gmail.com" method="post" encType="text/plain" onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
@@ -85,6 +85,7 @@ const ContactSection = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    autoComplete="name"
                     required
                     className="input-glow"
                     placeholder="Seu nome"
@@ -100,6 +101,7 @@ const ContactSection = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete="email"
                     required
                     className="input-glow"
                     placeholder="seu@email.com"
@@ -117,6 +119,7 @@ const ContactSection = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
+                  autoComplete="organization"
                   className="input-glow"
                   placeholder="Nome da sua empresa"
                 />
@@ -131,6 +134,7 @@ const ContactSection = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  autoComplete="off"
                   required
                   rows={5}
                   className="input-glow resize-none"
