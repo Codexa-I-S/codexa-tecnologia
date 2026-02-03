@@ -2,30 +2,33 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const milestones = [
-  {
-    date: 'Q1 2026',
-    title: 'Plataforma CODEXA Cloud',
-    description: 'Lançamento da nossa plataforma proprietária de infraestrutura inteligente, oferecendo deploy automatizado e escalabilidade sob demanda para empresas de todos os portes.',
-    color: 'neon-blue',
-  },
-  {
-    date: 'Q3 2026',
-    title: 'Expansão LATAM',
-    description: 'Abertura de operações no México e Colômbia, consolidando nossa presença como líder em soluções de software na América Latina.',
-    color: 'neon-purple',
-  },
-  {
-    date: 'Q1 2027',
-    title: 'CODEXA AI Lab',
-    description: 'Inauguração do nosso laboratório de IA Generativa, focado em desenvolver modelos proprietários para automação empresarial e análise preditiva.',
-    color: 'neon-cyan',
-  },
-  {
-    date: 'Q4 2027',
-    title: 'Enterprise Suite 2.0',
-    description: 'Nova versão da nossa suite empresarial com integração nativa de IA, dashboards personalizáveis e recursos avançados de segurança.',
-    color: 'neon-blue',
-  },
+{
+  date: 'Q1 2025',
+  title: 'Fundação da CODEXA',
+  description: 'Criação da CODEXA com foco no desenvolvimento de soluções digitais sob medida, unindo tecnologia, design e impacto regional.',
+  color: 'neon-cyan',
+},
+{
+  date: 'Q2 2025',
+  title: 'Lançamento do LitorMap',
+  description: 'Em parceria com a AMOTUR (Associação de Turismo de Amontada), lançamos o LitorMap, um software de mapa interativo voltado à digitalização do turismo, conectando pontos turísticos, rotas e estabelecimentos.',
+  color: 'neon-green',
+},
+{
+  date: 'Q3 2026',
+  title: 'Expansão para a Região Nordeste',
+  description: 'Expansão do LitorMap para todos os estados da Região Nordeste, promovendo a digitalização do turismo regional e a conexão entre destinos, estabelecimentos e gestores.',
+  color: 'neon-blue',
+},
+{
+  date: 'Q4 2027',
+  title: 'Expansão Nacional da CODEXA',
+  description: 'Ampliação das operações da CODEXA para todo o território brasileiro, levando soluções digitais, produtos proprietários e inovação tecnológica a empresas e instituições em escala nacional.',
+  color: 'neon-purple',
+},
+
+
+ 
 ];
 
 const RoadmapSection = () => {

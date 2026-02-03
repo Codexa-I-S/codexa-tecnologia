@@ -3,30 +3,31 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const historyEvents = [
   {
-    year: '2020',
-    title: 'Fundação e Missão',
-    description: 'A CODEXA nasceu da visão de dois engenheiros apaixonados por tecnologia, com a missão de democratizar o acesso a soluções de software de alta qualidade.',
+    year: '2025',
+    title: 'Fundação e Propósito',
+    description: 'A CODEXA nasce com o propósito de impulsionar a transformação digital por meio de soluções de software modernas, acessíveis e orientadas a impacto regional.',
   },
   {
-    year: '2021',
-    title: 'Primeiros Clientes Enterprise',
-    description: 'Conquistamos nossos primeiros contratos com grandes empresas, provando que qualidade e inovação andam juntas.',
+    year: '2025',
+    title: 'Primeiro Produto Proprietário',
+    description: 'Lançamento do LitorMap, marcando o início da CODEXA como criadora de produtos digitais próprios, em parceria com a AMOTUR.',
   },
   {
-    year: '2022',
-    title: 'Primeiro Grande Projeto',
-    description: 'Desenvolvemos a plataforma que revolucionou o setor logístico brasileiro, processando mais de 1 milhão de transações diárias.',
+    year: '2026',
+    title: 'Crescimento e Consolidação',
+    description: 'Ampliação do portfólio de soluções e consolidação da CODEXA como empresa de tecnologia, atendendo projetos para o setor público e privado.',
   },
   {
-    year: '2023',
-    title: 'Expansão da Equipe',
-    description: 'Triplicamos nosso time de engenheiros, atraindo talentos das melhores universidades e empresas de tecnologia.',
+    year: '2026',
+    title: 'Expansão Regional',
+    description: 'Expansão das operações e produtos da CODEXA para toda a Região Nordeste, fortalecendo a presença regional e a escala de atuação.',
   },
   {
-    year: '2024',
-    title: 'Inovação em IA',
-    description: 'Lançamos nossas primeiras soluções com IA integrada, posicionando a CODEXA na vanguarda da transformação digital.',
+    year: '2027',
+    title: 'Atuação Nacional',
+    description: 'Expansão da CODEXA para todo o território brasileiro, posicionando a empresa como referência em soluções digitais e inovação tecnológica.',
   },
+
 ];
 
 const HistoryTimeline = () => {
